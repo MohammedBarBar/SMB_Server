@@ -1,0 +1,13 @@
+# Let NetworkManager manage all deviices on this system
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens192:
+      dhcp4: no
+      addresses:
+        - 10.0.0.201/24
+      gateway4: 10.0.0.138
+      nameservers:
+        addresses: [8.8.8.8,1.1.1.1]
+
